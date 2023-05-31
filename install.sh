@@ -23,3 +23,17 @@
 # Dropbox
 #
 # feh
+#
+# vlc
+#
+# tmux
+#
+# wireshark
+#
+# tshark
+#
+# nmap
+#
+# openconnect
+#
+#
