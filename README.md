@@ -1,31 +1,13 @@
 # dotfiles
 
-## Dependencies
 
-```
-sudp apt install -y snapd
-```
-
-
-```
-sudp apt install -y feh 
-
-```
+## Install script
+The install script installs the following packages:
 
 
 
-
-## Alacritty
-
-```
-sudo snap install -y alacritty --classic
-```
-
-## i3
-
-```
-sudo apt install -y i3
-```
+## MS Teams
+Installed manually via Ubuntu Software
 
 
 
