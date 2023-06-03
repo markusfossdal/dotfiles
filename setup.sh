@@ -21,8 +21,13 @@ sudo rm -rf ~/.config > /dev/null 2>&1
 #==============
 # Create symlinks in the home folder
 #==============
+
 ln -sf $dotfiles_dir/bashrc ~/.bashrc
+
+mkdir -p ~/.config/
 ln -sf $dotfiles_dir/i3 ~/.config/i3
+
+mkdir -p ~/.config/
 ln -sf $dotfiles_dir/autorandr ~/.config/autorandr
 
 
