@@ -215,3 +215,9 @@ exec "feh --bg-fill ~/.config/i3/wallpapers/james_webb_nabula_5120_1440.jpg"
 #exec "feh --bg-fill ~/.config/i3/wallpapers/space_5120_1440.jpg"   
 #exec "feh --bg-fill ~/.config/i3/wallpapers/rice_5120_1440.jpg"  
 
+#Power management
+
+#standby, suspend, turn off - 600 900 1200
+#exec --no-startup-id xset dpms 600 900 1200
+exec --no-startup-id xset dpms 0 0 0
+
