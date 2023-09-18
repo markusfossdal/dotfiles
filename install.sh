@@ -57,14 +57,6 @@ fi
 
 # rofi
 
-#vim
-sudo apt install vim -y
-if type -p vim > /dev/null; then
-    echo "$(date +"%Y-%m-%d %T" ) Vim Installed" | tee -a $log_file
-else
-    echo "$(date +"%Y-%m-%d %T" ) Vim FAILED TO INSTALL!!!" | tee -a $log_file
-fi
-
 #neovim
 sudo add-apt-repository ppa:neovim-ppa/stable -y
 sudo apt-get update
@@ -93,21 +85,6 @@ if type -p spotify > /dev/null; then
 else
     echo "$(date +"%Y-%m-%d %T" ) Spotify FAILED TO INSTALL!!!" | tee -a $log_file
 fi
-
-# 1password
-#curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/keyrings/1password-archive-keyring.gpg
-#echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/1password-archive-keyring.gpg] https://downloads.1password.com/linux/debian/amd64 stable main' | sudo tee /etc/apt/sources.list.d/1password.list
-#sudo mkdir -p /etc/debsig/policies/AC2D62742012EA22/
-#curl -sS https://downloads.1password.com/linux/debian/debsig/1password.pol | sudo tee /etc/debsig/policies/AC2D62742012EA22/1password.pol
-#sudo mkdir -p /usr/share/debsig/keyrings/AC2D62742012EA22
-#curl -sS https://downloads.1password.com/linux/keys/1password.asc | sudo gpg --dearmor --output /usr/share/debsig/keyrings/AC2D62742012EA22/debsig.gpg
-#sudo apt update && sudo apt install 1password
-
-#if type -p 1password > /dev/null; then
-#    echo "$(date +"%Y-%m-%d %T" ) 1password Installed" | tee -a $log_file
-#else
-#    echo "$(date +"%Y-%m-%d %T" ) 1password FAILED TO INSTALL!!!" | tee -a $log_file
-#fi
 
 # Dropbox
 cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
@@ -209,15 +186,6 @@ if type -p flameshot > /dev/null; then
 else
     echo "$(date +"%Y-%m-%d %T" ) Flameshot FAILED TO INSTALL!!!" | tee -a $log_file
 fi
-
-#autorandr
-sudo apt install autorandr -y
-if type -p autorandr > /dev/null; then
-    echo "$(date +"%Y-%m-%d %T" ) autorandr Installed" | tee -a $log_file
-else
-    echo "$(date +"%Y-%m-%d %T" ) autorandr FAILED TO INSTALL!!!" | tee -a $log_file
-fi
-
 
 # Print install log
 echo -e "\n ===============Install log=============== \n"
