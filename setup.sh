@@ -17,12 +17,16 @@ log_file=~/install_progress_log.txt
 #==============
 sudo rm -rf ~/.bashrc > /dev/null 2>&1
 sudo rm -rf ~/.config > /dev/null 2>&1
+sudo rm -rf ~/.zshrc > /dev/null 2>&1
+
 
 #==============
 # Create symlinks in the home folder
 #==============
 
 ln -sf $dotfiles_dir/bashrc ~/.bashrc
+ln -sf $dotfiles_dir/zshrc ~/.zshrc
+
 
 mkdir -p ~/.config/
 ln -sf $dotfiles_dir/i3 ~/.config/i3
