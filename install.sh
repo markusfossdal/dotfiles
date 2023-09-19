@@ -169,15 +169,17 @@ else
 fi
 
 #Rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh | echo "1"
-rustup update
-source ~/.cargo/env
+#curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-if type -p rustup > /dev/null; then
-    echo "$(date +"%Y-%m-%d %T" ) Rust Installed" | tee -a $log_file
-else
-    echo "$(date +"%Y-%m-%d %T" ) Rust FAILED TO INSTALL!!!" | tee -a $log_file
-fi
+#rustup update
+
+#source ~/.cargo/env
+
+#if type -p rustup > /dev/null; then
+#    echo "$(date +"%Y-%m-%d %T" ) Rust Installed" | tee -a $log_file
+#else
+#    echo "$(date +"%Y-%m-%d %T" ) Rust FAILED TO INSTALL!!!" | tee -a $log_file
+#fi
 
 #Flameshot
 sudo apt install flameshot -y
