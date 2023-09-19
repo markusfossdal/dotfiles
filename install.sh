@@ -37,6 +37,17 @@ else
     echo "$(date +"%Y-%m-%d %T" ) Nvidia-driver FAILED TO INSTALL!!!" | tee -a $log_file
 fi
 
+
+# zsh
+sudo apt install zsh -y
+if type -p zsh --version > /dev/null; then
+    echo "$(date +"%Y-%m-%d %T" ) Zsh installed" | tee -a $log_file
+else
+    echo "$(date +"%Y-%m-%d %T" ) Zsh FAILED TO INSTALL!!!" | tee -a $log_file
+fi
+
+
+
 # alacritty
 sudo add-apt-repository ppa:aslatter/ppa -y
 sudo apt install alacritty -y
