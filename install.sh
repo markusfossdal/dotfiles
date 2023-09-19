@@ -49,6 +49,8 @@ fi
 #oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+#btop
+sudo apt install btop -y
 
 # alacritty
 sudo add-apt-repository ppa:aslatter/ppa -y
