@@ -28,4 +28,8 @@ mkdir -p ~/.config/
 ln -sf $dotfiles_dir/i3 ~/.config/i3
 
 
+mkdir -p ~/.config/alacritty
+ln -sf $dotfiles_dir/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+
+
 

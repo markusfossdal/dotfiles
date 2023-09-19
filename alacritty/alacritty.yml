@@ -28,7 +28,7 @@ font:
 draw_bold_text_with_bright_colors: true
 
 import:
-  - ~/.config/alacritty/catppuccin-mocha.yml
+  - ~/dotfiles/alacritty/catppuccin-mocha.yml
 
 selection:
   save_to_clipboard: false
