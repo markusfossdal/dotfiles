@@ -11,24 +11,57 @@ scrolling:
   history: 10000
   multiplier: 3
 
+# This is a basic Alacritty configuration file.
+
+# Font configuration
 font:
   normal:
-    family: JetBrainsMono Nerd Font
-    style:  Regular
+    family: Monospace
+    style: Regular
   bold:
-    family: JetBrainsMono Nerd Font
-    style:  Bold
+    family: Monospace
+    style: Bold
   italic:
-    family: JetBrainsMono Nerd Font
-    style:  Italic
+    family: Monospace
+    style: Italic
   bold_italic:
-    family: JetBrainsMono Nerd Font
+    family: Monospace
     style: Bold Italic
-  size: 7
-draw_bold_text_with_bright_colors: true
+  size: 8
 
-import:
-  - ~/dotfiles/alacritty/catppuccin-mocha.yml
+# Colors
+colors:
+  # Default colors
+  primary:
+    background: '#282a36'
+    foreground: '#f8f8f2'
+
+  # Normal colors
+  normal:
+    black:   '#44475a'
+    red:     '#ff5555'
+    green:   '#50fa7b'
+    yellow:  '#f1fa8c'
+    blue:    '#6272a4'
+    magenta: '#ff79c6'
+    cyan:    '#8be9fd'
+    white:   '#f8f8f2'
+
+  # Bright colors
+  bright:
+    black:   '#6272a4'
+    red:     '#ff6e6e'
+    green:   '#69ff94'
+    yellow:  '#f4f99d'
+    blue:    '#7684d6'
+    magenta: '#ff92df'
+    cyan:    '#9aedfe'
+    white:   '#f8f8f2'
+
+# Default shell to run (can be overridden by the shell key in key bindings)
+shell:
+  program: /usr/bin/zsh
+
 
 selection:
   save_to_clipboard: false
