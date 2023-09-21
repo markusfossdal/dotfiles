@@ -35,5 +35,8 @@ ln -sf $dotfiles_dir/i3 ~/.config/i3
 mkdir -p ~/.config/alacritty
 ln -sf $dotfiles_dir/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
 
+mkdir -p ~/.config/nvim
+ln -sf $dotfiles_dir/nvim/* ~/.config/nvim/
+
 
 

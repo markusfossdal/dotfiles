@@ -202,6 +202,17 @@ else
     echo "$(date +"%Y-%m-%d %T" ) Flameshot FAILED TO INSTALL!!!" | tee -a $log_file
 fi
 
+
+#Flameshot
+sudo apt install mlocate -y
+if type -p locate > /dev/null; then
+    echo "$(date +"%Y-%m-%d %T" ) mlocate Installed" | tee -a $log_file
+else
+    echo "$(date +"%Y-%m-%d %T" ) mlocate FAILED TO INSTALL!!!" | tee -a $log_file
+fi
+
+
+
 # Print install log
 echo -e "\n ===============Install log=============== \n"
 cat $log_file
