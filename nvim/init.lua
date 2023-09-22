@@ -1,4 +1,3 @@
--- Load files
-require("plugin.telescope")
-require("packer")
-require("mapping")
+require('keymaps_and_options')
+require('plugins')
+require('plugin_config')
