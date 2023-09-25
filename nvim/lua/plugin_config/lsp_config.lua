@@ -1,6 +1,6 @@
 require('mason').setup()
 require('mason-lspconfig').setup({
-    ensure_installed = {'lua_ls', 'clangd', 'rust_analyzer'}
+    ensure_installed = {'lua_ls', 'clangd', 'rust_analyzer','neocmake'}
     
 
 }
@@ -46,3 +46,7 @@ require("lspconfig").rust_analyzer.setup({
 })
 
 
+require("lspconfig").neocmake.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+})
