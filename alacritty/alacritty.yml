@@ -28,7 +28,7 @@ font:
     family: JetBrainsMono Nerd Font
     style: Regular
     style: Bold Italic
-  size: 9 
+  size: 11 
 
     # The definition of color schemes.
   schemes:

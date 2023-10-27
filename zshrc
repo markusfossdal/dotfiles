@@ -29,7 +29,7 @@ ZSH_THEME="robbyrussell"
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -47,7 +47,7 @@ ZSH_THEME="robbyrussell"
 # You can also set it to another string to have that shown instead of the default red dots.
 # e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -100,6 +100,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+#Tab completion
+#unsetopt MENU_COMPLETE
+setopt noautomenu
+
 # Change keyboard language
 alias setno="setxkbmap no"
 alias seten="setxkbmap us"
@@ -115,3 +119,11 @@ alias setwallpaper="feh --bg-fill ~/.config/i3/wallpapers/james_webb_nabula_5120
 source /opt/ros/humble/setup.zsh
 eval "$(register-python-argcomplete3 ros2)" #fix tab complete
 eval "$(register-python-argcomplete3 colcon)" #fix tab complete
+
+export GTK_MODULES=canberra-gtk-module
+# Symbolic link MATLAB
+alias matlab="export LD_PRELOAD=/lib/x86_64-linux-gnu/libstdc++.so.6 && /usr/local/MATLAB/R2023b/bin/matlab -softwareopengl"
+#-nodesktop -r "opengl info, desktop""
+
+
+
