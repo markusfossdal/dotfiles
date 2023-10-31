@@ -111,6 +111,8 @@ alias seten="setxkbmap us"
 # Xrandr
 alias xrandr_webster="xrandr --output DP-2 --mode 2560x1440 --rate 60 --right-of eDP-1 && feh --bg-fill ~/.config/i3/wallpapers/james_webb_nabula_5120_1440.jpg"
 alias xrandr_mobile="xrandr --output DP-2 --off"
+alias xrandr_office="xrandr --output DP-2 --mode 2560x1440 --rate 120 --right-of eDP-1 && feh --bg-fill ~/.config/i3/wallpapers/james_webb_nabula_5120_1440.jpg"
+
 
 #Set wallpaper
 alias setwallpaper="feh --bg-fill ~/.config/i3/wallpapers/james_webb_nabula_5120_1440.jpg"
