@@ -39,4 +39,6 @@ mkdir -p ~/.config/nvim
 ln -sf $dotfiles_dir/nvim/* ~/.config/nvim/
 
 
+mkdir -p ~/.config/polybar
+ln -sf $dotfiles_dir/polybar/* ~/.config/polybar/
 
