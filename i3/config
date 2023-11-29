@@ -203,8 +203,8 @@ bindsym $mod+z exec "flameshot gui"
 
 #i3-gaps
 for_window [class="^.*"] border pixel 3
-gaps inner 10 
-gaps outer 10
+gaps inner 5 
+gaps outer 5
 
 #Focus colors
 # class                 border  backgr. text    indicator

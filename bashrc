@@ -123,8 +123,23 @@ alias setno="setxkbmap no"
 alias seten="setxkbmap us"
 
 # Xrandr
-alias xrandr_webster="xrandr --output DP-2 --mode 2560x1440 --rate 60 --right-of eDP-1"
+alias xrandr_webster="xrandr --output DP-2 --mode 2560x1440 --rate 120 --right-of eDP-1 && feh --bg-fill ~/.config/i3/wallpapers/james_webb_nabula_5120_1440.jpg"
 alias xrandr_mobile="xrandr --output DP-2 --off"
-alias xrandr_mirror='function xrandr_mirror(){xrandr --output eDP-1 --auto --output "$1" --auto --same-as eDP-1;}'
+alias xrandr_office="xrandr --output DP-2 --mode 2560x1440 --rate 120 --right-of eDP-1 && feh --bg-fill ~/.config/i3/wallpapers/james_webb_nabula_5120_1440.jpg"
+
+#Set wallpaper
+alias setwallpaper="feh --bg-fill ~/.config/i3/wallpapers/james_webb_nabula_5120_1440.jpg"
+
+#Source Ros2
+source /opt/ros/humble/setup.bash
+#eval "$(register-python-argcomplete3 ros2)" #fix tab complete
+#eval "$(register-python-argcomplete3 colcon)" #fix tab complete
+
+export GTK_MODULES=canberra-gtk-module
+# Symbolic link MATLAB
+
+alias matlab="export LD_PRELOAD=/lib/x86_64-linux-gnu/libstdc++.so.6 && /usr/local/MATLAB/R2023b/bin/matlab -softwareopengl"
+
+#-nodesktop -r "opengl info, desktop""
 
 
