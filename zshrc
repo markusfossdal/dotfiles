@@ -118,9 +118,9 @@ alias xrandr_office="xrandr --output DP-2 --mode 2560x1440 --rate 120 --right-of
 alias setwallpaper="feh --bg-fill ~/.config/i3/wallpapers/james_webb_nabula_5120_1440.jpg"
 
 #Source Ros2
-source /opt/ros/humble/setup.zsh
-eval "$(register-python-argcomplete3 ros2)" #fix tab complete
-eval "$(register-python-argcomplete3 colcon)" #fix tab complete
+#source /opt/ros/humble/setup.zsh
+#eval "$(register-python-argcomplete3 ros2)" #fix tab complete
+#eval "$(register-python-argcomplete3 colcon)" #fix tab complete
 
 export GTK_MODULES=canberra-gtk-module
 # Symbolic link MATLAB
