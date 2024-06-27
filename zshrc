@@ -141,7 +141,11 @@ alias matlab="export LD_PRELOAD=/lib/x86_64-linux-gnu/libstdc++.so.6 && /usr/loc
 alias vim="$(which nvim)"
 alias srcros="source /opt/ros/humble/setup.bash"
 alias cat="batcat"
-alias fzf="fzf --preview 'batcat --style=numbers --color=always --line-range :500 {}'"
+alias fzf="fzf --preview 'batcat --style=numbers --color=always --line-range :500 {}' --bind 'enter:become(nvim {})'"
+
+alias fzfh="fzf --walker-root=$HOME --preview 'batcat --style=numbers --color=always --line-range :500 {}' --bind 'enter:become(nvim {})'"
+alias fzfa="fzf --walker-root=/ --preview 'batcat --style=numbers --color=always --line-range :500 {}' --bind 'enter:become(nvim {})'"
+
 
 setno
 
