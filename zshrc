@@ -1,3 +1,10 @@
+#mlocate Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -8,7 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -104,6 +111,9 @@ source $ZSH/oh-my-zsh.sh
 #unsetopt MENU_COMPLETE
 setopt noautomenu
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 # Change keyboard language
 alias setno="setxkbmap no"
 alias seten="setxkbmap us"
@@ -127,9 +137,15 @@ alias matlab="export LD_PRELOAD=/lib/x86_64-linux-gnu/libstdc++.so.6 && /usr/loc
 
 #-nodesktop -r "opengl info, desktop""
 
+
+alias vim="$(which nvim)"
 alias srcros="source /opt/ros/humble/setup.bash"
+alias cat="batcat"
+alias fzf="fzf --preview 'batcat --style=numbers --color=always --line-range :500 {}'"
 
 setno
 
 export ROS_DOMAIN_ID=34
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

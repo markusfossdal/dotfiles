@@ -203,15 +203,15 @@ else
 fi
 
 
-#Flameshot
-sudo apt install mlocate -y
+#batcat
+sudo apt install bat -y
 if type -p locate > /dev/null; then
-    echo "$(date +"%Y-%m-%d %T" ) mlocate Installed" | tee -a $log_file
+    echo "$(date +"%Y-%m-%d %T" ) batcat Installed" | tee -a $log_file
 else
-    echo "$(date +"%Y-%m-%d %T" ) mlocate FAILED TO INSTALL!!!" | tee -a $log_file
+    echo "$(date +"%Y-%m-%d %T" ) batcat FAILED TO INSTALL!!!" | tee -a $log_file
 fi
 
-
+#MANUAL INSTALL: FZF
 
 # Print install log
 echo -e "\n ===============Install log=============== \n"

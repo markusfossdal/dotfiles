@@ -146,3 +146,5 @@ setno
 
 export ROS_DOMAIN_ID=34
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
