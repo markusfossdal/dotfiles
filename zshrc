@@ -137,6 +137,7 @@ alias matlab="export LD_PRELOAD=/lib/x86_64-linux-gnu/libstdc++.so.6 && /usr/loc
 
 #-nodesktop -r "opengl info, desktop""
 
+. "$HOME/.cargo/env"
 
 alias vim="$(which nvim)"
 alias srcros="source /opt/ros/humble/setup.bash"

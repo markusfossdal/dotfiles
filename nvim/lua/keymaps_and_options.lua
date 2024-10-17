@@ -36,7 +36,8 @@ vim.wo.number = true -- line numbering
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>') -- clear search
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex) -- open file explore
 
-vim.keymap.set('v', 'J', ":m '>+1<CR>:noh<CR>")
+-- Move in V-mode up or down. !!Does not work as intended.!!
+vim.keymap.set('v', 'J', ":m '>+1<CR>:noh<CR>") 
 vim.keymap.set('v', 'K', ":m '<-2<CR>:noh<CR>")
 
 -- Map Shift-W to go to the far right of the line
@@ -56,14 +57,13 @@ vim.keymap.set('n','<C-u>','<C-u>zz',{noremap = true, silent = true})
 vim.keymap.set('n','n','nzzzv',{noremap = true, silent = true})
 vim.keymap.set('n','N','Nzzzv',{noremap = true, silent = true})
 
-
 -- replace current line with yank buffer, and keep yank buffer
 vim.keymap.set('x', '<leader>p', "\"_dP")
 
 -- use <leader>y to yank into system clipboard
-vim.keymap.set('n', '<leader>y', "\"+y")
-vim.keymap.set('v', '<leader>y', "\"+y")
-vim.keymap.set('n', '<leader>Y', "\"+Y")
+vim.keymap.set('n', '<leader>y', "\"+y") -- desrcibe in detail
+vim.keymap.set('v', '<leader>y', "\"+y") -- describe in detail
+vim.keymap.set('n', '<leader>Y', "\"+Y") -- describe in detail
 
 -- deletes to blackhole register
 vim.keymap.set('n','<leader>d','\"_d')
@@ -72,22 +72,11 @@ vim.keymap.set('v','<leader>d','\"_d')
 -- disable Q
 vim.keymap.set('n','Q','<nop>')
 
-
 -- remap Ctrl-C to ESC
 vim.keymap.set('i','<C-c>','<Esc>')
-
 
 -- replace current word with:
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
-
-
-
-
-
-
-
-
-
-
-
+-- change inner word
+vim.keymap.set('n', '<leader>cw', 'ciw')
