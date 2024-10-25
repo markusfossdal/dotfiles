@@ -15,15 +15,16 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
     --  Packer
     use 'wbthomason/packer.nvim'
+ 
     -- Colorscheme
     use { "ellisonleao/gruvbox.nvim" } -- Colorscheme
-
 
     -- Lualine
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
+ 
     -- nvim-tree
     --  use 'nvim-tree/nvim-tree.lua'
     --  use 'nvim-tree/nvim-web-devicons'
@@ -55,7 +56,6 @@ return require('packer').startup(function(use)
     -- fugitive?
     -- harpoon?
     -- cmd for auto completion
-
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

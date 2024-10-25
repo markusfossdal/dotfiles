@@ -103,4 +103,19 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+# Enable fzf for reverse search
+
+# CTRL-Y to copy the command into clipboard using pbcopy
+export FZF_CTRL_R_OPTS="
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --color header:italic
+  --header 'Press CTRL-Y to copy command into clipboard'"
+
+alias vim="$(which nvim)"
+alias cat="bat"
+alias fzf="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}' --bind 'enter:become(nvim {})'"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export LC_ALL=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
