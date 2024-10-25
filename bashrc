@@ -140,7 +140,7 @@ alias matlab="export LD_PRELOAD=/lib/x86_64-linux-gnu/libstdc++.so.6 && /usr/loc
 
 #-nodesktop -r "opengl info, desktop""
 
-alias srcros="source /opt/ros/humble/setup.bash"
+#alias srcros="source /opt/ros/humble/setup.bash"
 
 setno
 

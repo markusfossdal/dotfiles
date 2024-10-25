@@ -109,7 +109,11 @@ source $ZSH/oh-my-zsh.sh
 
 #Tab completion
 #unsetopt MENU_COMPLETE
-setopt noautomenu
+setopt noautomenu 
+
+#disable shared history between sessions
+unsetopt share_history
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -120,19 +124,14 @@ alias seten="setxkbmap us"
 
 # Xrandr
 alias xrandr_mobile="xrandr --output DP-2 --off && ${HOME}/dotfiles/polybar/launch.sh"
-alias xrandr_office="xrandr --output DP-2 --mode 5120x1440 --rate 120 --left-of eDP-1 && feh --bg-fill ~/.config/i3/wallpapers/james_webb_nabula_5120_1440.jpg && .${HOME}/dotfiles/polybar/launch.sh"
+alias xrandr_office="xrandr --output DP-2 --mode 5120x1440 --rate 120 --left-of eDP-1 && feh --bg-fill ~/.config/i3/wallpapers/james_webb_nabula_5120_1440.jpg"
 
 #Set wallpaper
 alias setwallpaper="feh --bg-fill ~/.config/i3/wallpapers/james_webb_nabula_5120_1440.jpg"
 
-#Source Ros2
-#source /opt/ros/humble/setup.bash
-#eval "$(register-python-argcomplete3 ros2)" #fix tab complete
-#eval "$(register-python-argcomplete3 colcon)" #fix tab complete
 
+#MATLAB
 export GTK_MODULES=canberra-gtk-module
-# Symbolic link MATLAB
-
 alias matlab="export LD_PRELOAD=/lib/x86_64-linux-gnu/libstdc++.so.6 && /usr/local/MATLAB/R2023b/bin/matlab -softwareopengl"
 
 #-nodesktop -r "opengl info, desktop""
@@ -140,7 +139,7 @@ alias matlab="export LD_PRELOAD=/lib/x86_64-linux-gnu/libstdc++.so.6 && /usr/loc
 . "$HOME/.cargo/env"
 
 alias vim="$(which nvim)"
-alias srcros="source /opt/ros/humble/setup.bash"
+alias srcros="source /opt/ros/humble/setup.zsh && source $HOME/dotfiles/zshrc"
 alias cat="batcat"
 alias fzf="fzf --preview 'batcat --style=numbers --color=always --line-range :500 {}' --bind 'enter:become(nvim {})'"
 
@@ -148,9 +147,17 @@ alias fzfh="fzf --walker-root=$HOME --preview 'batcat --style=numbers --color=al
 alias fzfa="fzf --walker-root=/ --preview 'batcat --style=numbers --color=always --line-range :500 {}' --bind 'enter:become(nvim {})'"
 
 setno
+
 export ROS_DOMAIN_ID=34
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
 export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
+
+source /opt/ros/humble/setup.zsh
+export ROS_DOMAIN_ID=34
+eval "$(register-python-argcomplete3 ros2)"
+eval "$(register-python-argcomplete3 colcon)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
