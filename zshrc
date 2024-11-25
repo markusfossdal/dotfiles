@@ -161,3 +161,6 @@ eval "$(register-python-argcomplete3 colcon)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+#includes mason binaries in PATH
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+
