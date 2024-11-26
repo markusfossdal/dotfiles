@@ -21,7 +21,7 @@ return {
       ensure_installed = {
         "lua_ls",
         "rust_analyzer",
-        -- "clangd",
+        "clangd",
         "cmake",
         "markdown_oxide",
       },
@@ -109,7 +109,7 @@ return {
 
     -- Configure clangd
     lspconfig.clangd.setup({
-      cmd = { "/usr/bin/clangd" },
+      -- cmd = { "/usr/bin/clangd" }, -- use native lsp
       capabilities = capabilities,
       on_attach = on_attach,
     })
