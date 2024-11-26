@@ -53,7 +53,7 @@ return {
       },
       actions = {
         open_file = {
-          quit_on_open = true, -- Close nvim-tree after opening a file
+          quit_on_open = false, -- Close nvim-tree after opening a file
         },
       },
     })
