@@ -25,6 +25,13 @@ return {
         "cmake",
         "markdown_oxide",
       },
+      opts = {
+        servers = {
+          clangd = {
+            mason = false,
+          },
+        },
+      },
       automatic_installation = true,
     })
 
