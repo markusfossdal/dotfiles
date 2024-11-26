@@ -11,7 +11,6 @@ return {
           json = { "prettier" }, -- reqires npm installed (brew)
           cpp = { "clang-format" }, --requires .clang-format in cwd
           rust = { "rustfmt" }, --deprecated?
-          dockerfile = { "dprint" }, -- requires dprint.json in cwd
         },
         format_on_save = {
           lsp_fallback = true,
