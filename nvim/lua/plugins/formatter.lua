@@ -5,12 +5,13 @@ return {
     config = function()
       require("conform").setup({
         formatters_by_ft = {
-          lua = { "stylua" },
+          lua = { "stylua" }, -- requires .stylua.toml in cwd
           yaml = { "prettier" }, -- reqires npm installed (brew)
           markdown = { "prettier" }, -- reqires npm installed (brew)
           json = { "prettier" }, -- reqires npm installed (brew)
-          cpp = { "clang-format" },
+          cpp = { "clang-format" }, --requires .clang-format in cwd
           rust = { "rustfmt" }, --deprecated?
+          dockerfile = { "dprint" }, -- requires dprint.json in cwd
         },
         format_on_save = {
           lsp_fallback = true,
