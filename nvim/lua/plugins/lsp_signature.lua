@@ -11,7 +11,16 @@ return {
       "i",
       "<C-k>",
       [[<Cmd>lua require('lsp_signature').toggle_float_win()<CR>]],
-      { noremap = true, silent = true }
+      { noremap = true, silent = true },
+
+      -- opens signature help on cursor
+      vim.keymap.set("n", "<leader>", function()
+        vim.lsp.buf.signature_help()
+      end, {
+        noremap = true,
+        silent = true,
+        desc = "Show signature help for function under cursor",
+      })
     )
   end,
 }
